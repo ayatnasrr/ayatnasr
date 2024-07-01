@@ -4,54 +4,223 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="ayatstyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <title>Ayat Nasr</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        /* General styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+        }
+        header {
+            background-color: rgb(238, 235, 235);
+            width: 100%;
+            position: fixed;
+            z-index: 999;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 200px;
+        }
+        .logo {
+            text-decoration: none;
+            color: maroon;
+            text-transform: uppercase;
+            font-weight: 700;
+            font-size: 1.8em;
+        }
+        .navigation a {
+            color: black;
+            text-decoration: none;
+            font-size: 1.1em;
+            font-weight: 500;
+            padding-left: 40px;
+        }
+        .navigation a:hover {
+            color: maroon;
+        }
+        section {
+            padding: 100px 200px;
+        }
+        .main {
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            background: url(images/5.jpeg) no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .main h2 {
+            color: white;
+            font-size: 1.4em;
+            font-weight: 500;
+        }
+        .main h2 span {
+            display: inline-block;
+            margin-top: 10px;
+            color: maroon;
+            font-size: 3em;
+            font-weight: 600;
+        }
+        .main h3 {
+            color: white;
+            font-size: 2em;
+            font-weight: 700;
+            letter-spacing: 1px;
+            margin-top: 10px;
+            margin-bottom: 30px;
+        }
+        .social-icons a {
+            color: white;
+            font-size: 3em;
+            padding-right: 30px;
+        }
+        .title {
+            display: flex;
+            justify-content: center;
+            color: maroon;
+            font-size: 2.2em;
+            font-weight: 800;
+            margin-bottom: 100px;
+        }
+        .content {
+            display: flex;
+            justify-content: center;
+            flex-direction: row;
+            flex-wrap: wrap;
+        }
+        .card {
+            background-color: white;
+            width: 50.50em;
+            box-shadow: 0 20px 100px black;
+            border-radius: 10px;
+            padding: 25px;
+            margin: 15px;
+            transition: 0.7s ease;
+        }
+        .card:hover {
+            transform: scale(1.1);
+        }
+        .icon {
+            color: maroon;
+            font-size: 5em;
+            text-align: center;
+        }
+        .info {
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .Photo {
+            background-color: black;
+        }
+        .photo.content {
+            margin-top: 30px;
+        }
+        .photo-card {
+            background-color: black;
+            box-shadow: 0 20px 100px rgb(37, 32, 32);
+            min-width: 10em;
+            width: 18em;
+            overflow: hidden;
+            border-radius: 10px;
+            margin: 13px;
+            transition: 0.7s ease;
+        }
+        .photo-card:hover {
+            transform: scale(1.1);
+        }
+        .photo-image img {
+            width: 100%;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 2em;
+            display: flex;
+            justify-content: space-between;
+        }
+        .footer-title {
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .footer-title span {
+            color: maroon;
+        }
+        .footer.social-icons a {
+            font-size: .5em;
+        }
+        @media (max-width: 1023px) {
+            header {
+                padding: 8px 10px;
+            }
+            .navigation a {
+                padding-left: 10px;
+            }
+            .title {
+                font-size: 1.8em;
+            }
+            section {
+                padding: 80px 20px;
+            }
+            .main-content h2 {
+                font-size: 1em;
+            }
+            .main-content h3 {
+                font-size: 1.6em;
+            }
+            .content {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+        @media (max-width: 641px) {
+            body {
+                font-size: 12px;
+            }
+            .main-content h2 {
+                font-size: 0.8em;
+            }
+            .main-content h3 {
+                font-size: 1.4em;
+            }
+        }
+        @media (max-width: 300px) {
+            body {
+                font-size: 10px;
+            }
+        }
+    </style>
 </head>
 <body>
     <header>
-      
-
-        <meta thhp-equiv="X-UA-Comptible" content="IE=edg,chrome=1">
-        <meta name="viewport" content="width=device-width; inital-scale=2.0">
-
-
-
-         <a href="#" class="logo"> <MARQUEE scrolldelay="200">Ayat Nasr </MARQUEE>    </a>
-         <nav class="navigation">
+        <a href="#" class="logo">Ayat Nasr</a>
+        <nav class="navigation">
             <a href="#About">About</a>
-             <a href="#Photo">Photo</a>
-
-
-
-
+            <a href="#Photo">Photo</a>
         </nav>
     </header>
-   
-    
     
     <section class="main">
         <div>
             <h2> Ayat Nasr <br> <span> Data Analyst </span></h2>
             <h3>الحياة لمن يجرؤ</h3>        
-                <section class="main">
-    <div>
-        <h2> Ayat Nasr <br> <span> Data Analyst </span></h2>
-        <h3>"What we think, we become"</h3>        
-        <div class="social-icons">
-            <a href="mailto:ayatnasr666@gmail.com"><i class="far fa-envelope"></i></a> <!-- أيقونة البريد الإلكتروني -->
-            <a href="https://www.linkedin.com/in/ayat-nasr-01a597234"><i class="fab fa-linkedin"></i></a> <!-- أيقونة LinkedIn -->
-            <a href="path/to/aytnasrcv.docx" download><i class="far fa-file-word"></i></a> <!-- أيقونة CV -->
-        </div>
-    </div>
-</section>
-
-                <a href="https://www.linkedin.com/in/ayat-nasr-01a597234"><i class="fab fa-linkedin"></i></a>
+            <div class="social-icons">
+                <a href="mailto:ayatnasr666@gmail.com"><i class="far fa-envelope"></i></a> <!-- أيقونة البريد الإلكتروني -->
+                <a href="https://www.linkedin.com/in/ayat-nasr-01a597234"><i class="fab fa-linkedin"></i></a> <!-- أيقونة LinkedIn -->
+                <a href="path/to/aytnasrcv.docx" download><i class="far fa-file-word"></i></a> <!-- أيقونة CV -->
             </div>
-         </div>
+        </div>
     </section>
 
- <section class="cards" id="About">
+    <section class="cards" id="About">
         <h2 class="title">About</h2>
         <div class="content">
             <div class="card">
@@ -69,18 +238,15 @@
         </div>
     </section>
 
-
-<section class="Photo" id="Photo">
-    <h2 class="title">Photo </h2>
-    <div class="content">
-        <div class="photo-card">
-            <div class="photo-image">
-                <img src="images/a1.jpeg"/>
-            
+    <section class="Photo" id="Photo">
+        <h2 class="title">Photo </h2>
+        <div class="content">
+            <div class="photo-card">
+                <div class="photo-image">
+                    <img src="images/a1.jpeg"/>
+                </div>
             </div>
-        </div>
-
-        <div class="photo-card">
+              <div class="photo-card">
             <div class="photo-image">
                 <img src="images/a2.jpeg"/>
             
@@ -240,19 +406,17 @@
         </div>
     </div>
 </section>
+            
+        </div>
+    </section>
 
-
-
-
-
-<footer class="footer">
-    <p class="footer-title"> Copyright @ <span>Ayat Nasr</span></p>
-    <div class="info">
-        <h3>Email</h3>
-        <p>ayatnasr666@gmail.com</p>
-    </div>
-</footer>
-
-
+    <footer class="footer
+    <footer class="footer">
+        <p class="footer-title"> Copyright @ <span>Ayat Nasr</span></p>
+        <div class="info">
+            <h3>Email</h3>
+            <p>ayatnasr666@gmail.com</p>
+        </div>
+    </footer>
 </body>
 </html>
