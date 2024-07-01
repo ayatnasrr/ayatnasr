@@ -308,9 +308,6 @@ margin-bottom: 30px;
 .photo-card:hover {
     transform: scale(1.1);
 }
-.photo-image img{ 
-    width: 100%;
-}
 
 .footer{
     background-color: black;
