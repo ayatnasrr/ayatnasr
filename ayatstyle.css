@@ -99,9 +99,7 @@ header {
 
 .photo-image img {
     width: 100%;
-    height: auto;
     border-radius: 5px;
-    object-fit: cover;
 }
 
 .footer {
@@ -117,13 +115,6 @@ header {
 
 .footer .info h3 {
     margin: 10px 0 5px;
-}
-
-/* Fixed Size for Images */
-.photo-image img {
-    width: 100%;
-    height: 200px;
-    object-fit: cover;
 }
 
 /* Responsive Styles */
@@ -371,10 +362,6 @@ margin-bottom: 30px;
 
 }
 
-
-
-
-
 @media (max-width:641px){
     body{
         font-size: 12px;
@@ -392,6 +379,5 @@ margin-bottom: 30px;
 @media (max-width:300px){
     body{
         font-size: 10px;
-     
     }
 }
